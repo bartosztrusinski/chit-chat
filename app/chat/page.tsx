@@ -1,7 +1,7 @@
 const ChatHome = () => {
   return (
     <>
-      <h1>Hello</h1>
+      There will be a chat list here soon <br /> Stay tuned!
     </>
   );
 };
