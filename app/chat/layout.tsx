@@ -1,12 +1,12 @@
-import { ChatsSidebar } from '@/components/ChatsSidebar';
+import { ChatsSidebar } from '@/components/chat/ChatsSidebar';
 import React from 'react';
 
 const ChatsLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
-    <>
+    <main className='flex h-dvh'>
       <ChatsSidebar />
-      {children}
-    </>
+      <div>{children}</div>
+    </main>
   );
 };
 

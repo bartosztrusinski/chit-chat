@@ -1,8 +1,8 @@
 const ExampleConversation = () => {
   return (
     <>
-      <h1>Hello Chit Chat</h1>
-      This is the example chat! 🦧
+      <h1 className='text-2xl'>Hello Chit Chat</h1>
+      <p>This is the example chat! 🦧</p>
     </>
   );
 };
