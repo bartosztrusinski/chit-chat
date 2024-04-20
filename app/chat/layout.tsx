@@ -1,10 +1,10 @@
-import { ChatSidebar } from './components/ChatSidebar';
+import { ChatsView } from './components/ChatsView';
 import { ChatReader } from './components/ChatReader';
 
 const ChatsLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
     <main className='flex min-h-screen'>
-      <ChatSidebar />
+      <ChatsView />
       <ChatReader>{children}</ChatReader>
     </main>
   );
