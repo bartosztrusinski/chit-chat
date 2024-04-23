@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 import { createClient } from '@/utils/supabase/server';
 import './globals.css';
+import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
   title: 'Chit-Chat',
@@ -21,28 +22,29 @@ export default async function RootLayout({
   return (
     <html lang='en'>
       <body className={GeistSans.className}>
-        <nav className='px-4 py-4 bg-gray-800 flex justify-between items-center'>
+        <nav className='flex items-center justify-between bg-gray-800 px-4 py-4'>
           <h1 className='text-3xl font-bold'>
             <Link href='/'>📱Chit-Chat</Link>
           </h1>
           {data?.user ? (
-            <div className='flex gap-4 items-center'>
+            <div className='flex items-center gap-4'>
               <p className='font-light'>Logged In as {data?.user.email}</p>
-              <Link href='/private' className='text-black bg-white p-2 rounded'>
+              <Link href='/private' className='rounded bg-white p-2 text-black'>
                 Private page
               </Link>
             </div>
           ) : (
             <ul className='flex gap-4'>
               <li>
-                <Link href='/login' className='text-black bg-white p-2 rounded'>
+                <Link href='/login' className='rounded bg-white p-2 text-black'>
                   Log In
                 </Link>
               </li>
               <li>
                 <Link
                   href='/register'
-                  className='text-black bg-white p-2 rounded'>
+                  className='rounded bg-white p-2 text-black'
+                >
                   Sign Up
                 </Link>
               </li>
@@ -50,6 +52,7 @@ export default async function RootLayout({
           )}
         </nav>
         {children}
+        <Toaster />
       </body>
     </html>
   );
