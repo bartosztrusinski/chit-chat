@@ -12,8 +12,7 @@ const ChatSelectPage = async () => {
   }
 
   return (
-    <main>
-      <h1>Chats</h1>
+    <main className='p-4'>
       <ChatList userId={data.user.id} />
     </main>
   );
