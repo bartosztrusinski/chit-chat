@@ -2,9 +2,9 @@ import { GeistSans } from 'geist/font/sans';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
+import '@/app/globals.css';
 import { cn } from '@/lib/utils';
 import { createClient } from '@/utils/supabase/server';
-import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Chit-Chat',
@@ -21,8 +21,8 @@ export default async function RootLayout({
 
   return (
     <html lang='en'>
-      <body className={cn('bg-black text-slate-100', GeistSans.className)}>
-        <nav className='flex items-center justify-between bg-gray-800 p-2'>
+      <body className={cn('bg-black/90 text-slate-100', GeistSans.className)}>
+        <nav className='flex items-center justify-between bg-black/90 p-2'>
           <h1 className='text-xl font-bold'>
             <Link href='/'>📱Chit-Chat</Link>
           </h1>

@@ -3,7 +3,7 @@
  * "a minute ago", "in 2 hours", "yesterday", "3 months ago", etc.
  * using Intl.RelativeTimeFormat
  */
-export function getRelativeTimeString(date: Date, lang = 'en'): string {
+export function getRelativeDate(date: Date, lang = 'en'): string {
   // Get the user's language if available
   if (typeof navigator !== 'undefined') {
     lang = navigator.language;
