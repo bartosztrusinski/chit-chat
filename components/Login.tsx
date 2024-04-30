@@ -16,11 +16,8 @@ const Login = () => {
 
     const result = LoginSchema.safeParse(userData);
 
-    if (result.success === false) {
-      let errorMessage: string = '';
-      result.error.issues.forEach((issue) => {
-        errorMessage = issue.message;
-      });
+    if (!result.success) {
+      const errorMessage = result.error.issues.at(-1)?.message;
       toast({
         variant: 'destructive', // no fucking idea why this shit don't work... I copied it from documentation
         title: 'Something goes wrong...',
