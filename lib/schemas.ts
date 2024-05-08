@@ -1,6 +1,6 @@
-import { z } from 'zod';
+import { ZodType, z } from 'zod';
 
-export const LoginSchema = z.object({
+export const LoginSchema: ZodType<UserLogin> = z.object({
   email: z.string().email({
     message: 'Please enter your email address',
   }),
