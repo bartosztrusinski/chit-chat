@@ -178,6 +178,7 @@ function useToast() {
       if (index > -1) {
         listeners.splice(index, 1);
       }
+      0;
     };
   }, [state]);
 
